@@ -54,6 +54,7 @@ int* slice_digit( int num ){
         num = num / 10;
 
         parts[i++] = mod;
+        // *(parts + (i++)) = mod;と等価
     }
     return parts;
 }
@@ -91,5 +92,8 @@ int main(){
 
     cout << &vals[1] << endl;
     cout << valptr + 1 << endl;
+
+
+
     return 0;
 }
